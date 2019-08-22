@@ -8,7 +8,12 @@
     <ng-container *ngFor="let item of scroll.viewPortItems">
       <ng-container *ngIf="isArray(item); else title">
         <div class="grid">
-          <gallery-img *ngFor="let num of item" [item]="num"></gallery-img>
+          <composited-card
+            *ngFor="let num of item"
+            class="card"
+            [protoId]="num"
+            [quality]="4"
+          ></composited-card>
         </div>
       </ng-container>
       <ng-template #title>

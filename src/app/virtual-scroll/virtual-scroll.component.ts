@@ -11,7 +11,7 @@ export class VirtualScrollComponent implements OnInit {
   public viewPortItems: any;
 
   constructor() {
-    for (let index = 0; index < 100; index++) {
+    for (let index = 1; index < 100; index++) {
       this.items.push(index);
     }
     this.groupedItems = groupArr(this.items, 4);
