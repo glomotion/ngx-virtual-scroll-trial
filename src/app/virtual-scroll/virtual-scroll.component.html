@@ -1,13 +1,24 @@
-
-<virtual-scroller #scroll [items]="items" (vsUpdate)="fetchMore($event)">
-
+<virtual-scroller
+  #scroll
+  [items]="items"
+  (vsUpdate)="fetchMore($event)"
+  [enableUnequalChildrenSizes]="true"
+>
   <div class="gallery-items" #container>
-
-    <gallery-img *ngFor="let item of scroll.viewPortItems;"
-    [item]="item"
-    class="gallery-item">
-    </gallery-img>
-
+    <ng-container *ngFor="let item of scroll.viewPortItems">
+      <ng-container *ngIf="isNumber(item); else title">
+        <gallery-img
+          [item]="item"
+          style="height: 400px; overflow: hidden;"
+        ></gallery-img>
+      </ng-container>
+      <ng-template #title>
+        <h1
+          style="grid-column: 1 / span 4; line-height: 5vh; height: 5vh; text-align: center;"
+        >
+          {{ item }}
+        </h1>
+      </ng-template>
+    </ng-container>
   </div>
-
 </virtual-scroller>

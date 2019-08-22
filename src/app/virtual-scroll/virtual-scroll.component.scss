@@ -1,21 +1,16 @@
-
 virtual-scroller {
   width: auto;
   height: 700px;
 }
 
 .gallery-items {
-//   width: 100%;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  // grid-template-rows: repeat(auto-fit, 400px);
-  grid-gap: 50px;
+  grid-template-columns: repeat(4, 1fr);
   justify-content: center;
 }
 
 .gallery-item {
-  width: 300px;
-  height: 400px;
+  width: 100%;
 
   img {
     width: 100%;
