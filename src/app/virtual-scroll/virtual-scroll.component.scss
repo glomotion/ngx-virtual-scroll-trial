@@ -1,6 +1,7 @@
-virtual-scroller {
-  width: auto;
-  height: 700px;
+:host {
+  width: 90%;
+  height: 90vh;
+  margin: auto;
 }
 
 .gallery-items {
@@ -10,6 +11,7 @@ virtual-scroller {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   justify-content: center;
+  margin-bottom: 3vh;
 }
 
 .title {
