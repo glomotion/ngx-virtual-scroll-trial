@@ -4,9 +4,17 @@ virtual-scroller {
 }
 
 .gallery-items {
+}
+
+.grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   justify-content: center;
+}
+
+.title {
+  text-align: center;
+  line-height: 5vh;
 }
 
 .gallery-item {
